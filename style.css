@@ -1,44 +1,48 @@
-:root{
+:root {
     --primary-font: 'Poppins', sans-serif;
 }
 
-@font-face{
+@font-face {
     font-family: glitch;
     src: url(RubikGlitch-Regular.ttf);
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: var(--primary-font);
     z-index: 0;
 }
-body{
+
+body {
     overflow-x: hidden;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
 
-.bg{
+/* Main Section */
+.bg {
     height: 100vh;
     width: 100vw;
     display: flex;
     position: relative;
 }
 
-.leftbg{
+.leftbg {
     width: 70%;
     background-color: #2E1114;
 }
-.rightbg{
+
+.rightbg {
     width: 30%;
     background-color: #8D8741;
 }
 
-.mainContent{
+.mainContent {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -48,7 +52,7 @@ a{
     align-items: center;
 }
 
-nav{
+nav {
     position: relative;
     top: 30px;
     display: flex;
@@ -59,11 +63,11 @@ nav{
     position: relative;
 }
 
-.navHead{
+.navHead {
     margin-right: 20px;
 }
 
-.navHead h1{
+.navHead h1 {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-family: 'glitch';
@@ -71,12 +75,13 @@ nav{
     font-size: 40px;
     color: #FFFDD5;
 }
-.navLinks{
+
+.navLinks {
     display: flex;
     height: 100%;
 }
 
-.navLinks ul{
+.navLinks ul {
     display: flex;
     list-style: none;
     text-decoration: none;
@@ -85,13 +90,13 @@ nav{
     align-items: center;
 }
 
-.navLinks ul li{
+.navLinks ul li {
     margin-right: 40px;
     font-size: 13px;
     letter-spacing: 2px;
 }
 
-.userIcon{
+.userIcon {
     position: absolute;
     right: 10%;
     display: flex;
@@ -99,37 +104,40 @@ nav{
     color: white;
 }
 
-.userIcon img{
+.userIcon img {
     width: 40px;
     margin-right: 10px;
 }
-.userIcon i{
+
+.userIcon i {
     margin-left: 5px;
 }
 
-.hero{
+.hero {
     height: 80vh;
     width: 100%;
     display: flex;
 }
 
-.leftHero{
+.leftHero {
     width: 60%;
     height: 90%;
     text-transform: uppercase;
     padding-top: 80px;
     padding-left: 60px;
 }
-.rightHero{
+
+.rightHero {
     width: 40%;
     height: 90%;
     position: relative;
 }
 
-.leftHero-content{
+.leftHero-content {
     margin-top: 50px;
 }
-.leftHero-content h1{
+
+.leftHero-content h1 {
     color: #FFFDD5;
     font-size: 160px;
     line-height: 100px;
@@ -138,10 +146,11 @@ nav{
     letter-spacing: 5px;
     text-shadow: 5px 6px 10px black;
     -webkit-text-stroke: 8px #FFFDD5;
-    -moz-text-stroke:8px #FFFDD5;
+    -moz-text-stroke: 8px #FFFDD5;
 }
-.leftHero-content p{
-    color:white;
+
+.leftHero-content p {
+    color: white;
     font-size: 32px;
     line-height: 45px;
     letter-spacing: 10px;
@@ -150,7 +159,7 @@ nav{
     -moz-text-stroke: 2px white;
 }
 
-.search{
+.search {
     position: relative;
     display: flex;
     align-items: center;
@@ -158,18 +167,21 @@ nav{
     display: flex;
     margin-top: 20px;
 }
-input[type=text]{
+
+input[type=text] {
     margin-left: 20px;
     border: none;
     height: 60px;
     width: 100%;
     padding-left: 50px;
 }
-input[type=text]:is(:hover, :focus){
+
+input[type=text]:is(:hover, :focus) {
     outline: none;
     box-shadow: none;
 }
-button{
+
+button {
     border: none;
     height: 45px;
     width: 120px;
@@ -183,38 +195,40 @@ button{
     cursor: pointer;
 }
 
-.burger{
+.burger {
     height: 120%;
     position: relative;
     left: 50px;
     z-index: 0;
 }
 
-.tomato{
+.tomato {
     height: 200px;
     width: 200px;
     position: absolute;
 }
 
-#tomato1{
+#tomato1 {
     top: 55px;
     left: -95px;
     transform: rotate(75deg);
 }
-#tomato2{
+
+#tomato2 {
     z-index: -1;
     top: 212px;
     left: -44px;
     transform: rotate(30deg);
 }
-#tomato3{
+
+#tomato3 {
     z-index: -1;
     top: 381px;
     left: -92px;
     transform: rotate(50deg);
 }
 
-.mainBottom{
+.mainBottom {
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -223,7 +237,7 @@ button{
     padding-right: 100px;
 }
 
-.location{
+.location {
     display: flex;
     color: white;
     background-color: aqua;
@@ -233,15 +247,16 @@ button{
     font-size: 15px;
     letter-spacing: 2px;
     align-items: center;
-    border-radius: 0px  50px 50px  0px;
+    border-radius: 0px 50px 50px 0px;
     position: relative;
     top: -30px;
 }
 
-.location > i{
+.location>i {
     margin-right: 5px;
 }
-.rightLeftIcons{
+
+.rightLeftIcons {
     height: fit-content;
     width: 180px;
     display: flex;
@@ -249,7 +264,7 @@ button{
     margin: auto 0px;
 }
 
-.rightLeftIcons > div{
+.rightLeftIcons>div {
     height: 35px;
     width: 35px;
     border: 1.5px solid white;
@@ -259,7 +274,8 @@ button{
     border-radius: 50%;
     position: relative;
 }
-.rightLeftIcons > div>i{
+
+.rightLeftIcons>div>i {
     position: absolute;
     top: 0px;
     font-size: 35px;
@@ -267,15 +283,18 @@ button{
     color: white;
 }
 
-.toLeft > i{
+.toLeft>i {
     position: absolute;
     left: 10px;
     -webkit-text-stroke: 2px #8D8741;
     -moz-text-stroke: 2px #8D8741;
 }
-.toRight > i{
+
+.toRight>i {
     position: absolute;
     left: -10px;
     -webkit-text-stroke: 2px #8D8741;
     -moz-text-stroke: 3px #8D8741;
 }
+
+/* Second Section */

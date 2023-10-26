@@ -1,0 +1,281 @@
+:root{
+    --primary-font: 'Poppins', sans-serif;
+}
+
+@font-face{
+    font-family: glitch;
+    src: url(RubikGlitch-Regular.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+    z-index: 0;
+}
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.bg{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: relative;
+}
+
+.leftbg{
+    width: 70%;
+    background-color: #2E1114;
+}
+.rightbg{
+    width: 30%;
+    background-color: #8D8741;
+}
+
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    align-items: center;
+}
+
+nav{
+    position: relative;
+    top: 30px;
+    display: flex;
+    height: max-content;
+    padding-left: 100px;
+    width: 100%;
+    align-items: flex-end;
+    position: relative;
+}
+
+.navHead{
+    margin-right: 20px;
+}
+
+.navHead h1{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: 'glitch';
+    font-weight: 100;
+    font-size: 40px;
+    color: #FFFDD5;
+}
+.navLinks{
+    display: flex;
+    height: 100%;
+}
+
+.navLinks ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+}
+
+.navLinks ul li{
+    margin-right: 40px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.userIcon{
+    position: absolute;
+    right: 10%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.userIcon img{
+    width: 40px;
+    margin-right: 10px;
+}
+.userIcon i{
+    margin-left: 5px;
+}
+
+.hero{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+}
+
+.leftHero{
+    width: 60%;
+    height: 90%;
+    text-transform: uppercase;
+    padding-top: 80px;
+    padding-left: 60px;
+}
+.rightHero{
+    width: 40%;
+    height: 90%;
+    position: relative;
+}
+
+.leftHero-content{
+    margin-top: 50px;
+}
+.leftHero-content h1{
+    color: #FFFDD5;
+    font-size: 160px;
+    line-height: 100px;
+    margin-bottom: 35px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow: 5px 6px 10px black;
+    -webkit-text-stroke: 8px #FFFDD5;
+    -moz-text-stroke:8px #FFFDD5;
+}
+.leftHero-content p{
+    color:white;
+    font-size: 32px;
+    line-height: 45px;
+    letter-spacing: 10px;
+    margin-left: 20px;
+    -webkit-text-stroke: 2px white;
+    -moz-text-stroke: 2px white;
+}
+
+.search{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    display: flex;
+    margin-top: 20px;
+}
+input[type=text]{
+    margin-left: 20px;
+    border: none;
+    height: 60px;
+    width: 100%;
+    padding-left: 50px;
+}
+input[type=text]:is(:hover, :focus){
+    outline: none;
+    box-shadow: none;
+}
+button{
+    border: none;
+    height: 45px;
+    width: 120px;
+    border-radius: 50px 0% 0% 0%;
+    position: absolute;
+    background-color: #8D8741;
+    right: 10px;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.burger{
+    height: 120%;
+    position: relative;
+    left: 50px;
+    z-index: 0;
+}
+
+.tomato{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+
+#tomato1{
+    top: 55px;
+    left: -95px;
+    transform: rotate(75deg);
+}
+#tomato2{
+    z-index: -1;
+    top: 212px;
+    left: -44px;
+    transform: rotate(30deg);
+}
+#tomato3{
+    z-index: -1;
+    top: 381px;
+    left: -92px;
+    transform: rotate(50deg);
+}
+
+.mainBottom{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 100px;
+}
+
+.location{
+    display: flex;
+    color: white;
+    background-color: aqua;
+    height: fit-content;
+    padding: 5px 20px;
+    background: #8D8741;
+    font-size: 15px;
+    letter-spacing: 2px;
+    align-items: center;
+    border-radius: 0px  50px 50px  0px;
+    position: relative;
+    top: -30px;
+}
+
+.location > i{
+    margin-right: 5px;
+}
+.rightLeftIcons{
+    height: fit-content;
+    width: 180px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto 0px;
+}
+
+.rightLeftIcons > div{
+    height: 35px;
+    width: 35px;
+    border: 1.5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+}
+.rightLeftIcons > div>i{
+    position: absolute;
+    top: 0px;
+    font-size: 35px;
+    font-weight: 100;
+    color: white;
+}
+
+.toLeft > i{
+    position: absolute;
+    left: 10px;
+    -webkit-text-stroke: 2px #8D8741;
+    -moz-text-stroke: 2px #8D8741;
+}
+.toRight > i{
+    position: absolute;
+    left: -10px;
+    -webkit-text-stroke: 2px #8D8741;
+    -moz-text-stroke: 3px #8D8741;
+}

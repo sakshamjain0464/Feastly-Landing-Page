@@ -1,5 +1,6 @@
 :root {
     --primary-font: 'Poppins', sans-serif;
+    --primary-color: #2E1114;
 }
 
 @font-face {
@@ -105,7 +106,9 @@ nav {
 }
 
 .userIcon img {
-    width: 40px;
+    height: 50px;
+    position: absolute;
+    right: 50px;
     margin-right: 10px;
 }
 
@@ -298,3 +301,218 @@ button {
 }
 
 /* Second Section */
+.second{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden; 
+}
+.bgSecond{
+    height: 100vh;
+    width: 100vw;
+    background-color: #2E1114;
+    display: flex;
+    position: relative;
+}
+img{
+    position: absolute;
+    height: 70%;
+    z-index: 2;
+}
+
+.bgSecond-IMG-1{
+    position: absolute;
+    transform: rotate(30deg);
+    top: -70px;
+    left: -100px;
+}
+
+.bgSecond-IMG-2{
+    position: absolute;
+    bottom: 20px;
+    right: -50px;
+    transform: rotate(200deg);
+}
+
+.bgSecond div{
+    height: 28px;
+    width: 238px;
+    border: 5px dotted white;
+    position: absolute;
+    top: 200px;
+    z-index: 2;
+}
+
+.secondContent{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: aqua; */
+    position: absolute;
+    padding: 50px 100px;
+    top: 0px;
+    overflow: hidden;
+    /* opacity: 0.5; */
+}
+
+.secondTop{
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-rows: 100%;
+    grid-template-columns: 30% 60%;
+    column-gap: 50px ;
+}
+
+.secondHead{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #FE043C;
+    letter-spacing: 2px;
+    padding: 0px 15px;
+    font-weight: 800;
+    position: relative;
+    
+}
+
+.secondHead > h1{
+    height: fit-content;
+}
+.secondHead > h1::before{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 15px;
+    background-color: #112159;
+    left: -30px;
+    opacity: 0.7;
+}
+.secondText{
+    padding-right: 110px;
+    color: white;
+    font-size: 15px;
+}
+
+.secondCards{
+    margin-top: 30px;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    align-items: flex-end;
+    width: 35%;
+    height: 100%;
+    background-color: red;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0px 20px;
+}
+.card1{
+    background: url(./images/Rectangle\ 7_1.png) no-repeat center;
+    background-size: cover;
+}
+.card2{
+    background: url(./images/Rectangle\ 7.png) no-repeat center ;
+    background-size: cover;
+}
+
+.card > div{
+    height: 45%;
+    width: 100%;
+    background-color: rgba(255, 255, 60, 0.403);
+    backdrop-filter: brightness(50%);
+    -webkit-backdrop-filter: brightness(0.5);
+    color: white;
+}
+
+.card1 > div{
+    background: rgba(42, 36, 66, 0.7);
+}
+
+.card2 > div{
+    background: rgba(221, 135, 34, 0.6);
+}
+.cardContent{
+
+}
+.cardHead{
+    margin: 20px 0px 10px 30px;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.cardText{
+    margin: 0px 100px 10px 30px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.cardLoc{
+    display: flex;
+    font-size: 10px;
+    margin: 0px 50px 10px 30px;
+    align-items: flex-end;
+}
+
+.cardLoc i{
+    font-size: 20px;
+    margin-right: 5px;
+    letter-spacing: 1px;
+}
+
+.cardBtn{
+    position: absolute;
+    bottom: 25px;
+    right: 0px;
+    font-size: 12px;
+    border-radius: 100px 0px 0px 100px;
+    letter-spacing: 1px;
+    width: 138px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #FE043C;
+}
+
+.secondDots{
+    position: absolute;
+    width: 200px;
+    border: 5px dotted white;
+    border-bottom: none;
+    right: 500px;
+    margin-top: 30px;
+}
+
+.toCard{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+}
+
+.toCard > div{
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.toCard i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: #FE043C;
+    border-radius: 50%;
+    padding: 10px;
+}

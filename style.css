@@ -171,7 +171,7 @@ nav {
     margin-top: 20px;
 }
 
-input[type=text] {
+input[itemprop = search] {
     margin-left: 20px;
     border: none;
     height: 60px;
@@ -437,9 +437,7 @@ img{
 .card2 > div{
     background: rgba(221, 135, 34, 0.6);
 }
-.cardContent{
 
-}
 .cardHead{
     margin: 20px 0px 10px 30px;
     text-transform: capitalize;
@@ -515,4 +513,253 @@ img{
     background-color: #FE043C;
     border-radius: 50%;
     padding: 10px;
+}
+
+/* Third Section */
+.third{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.thirdBg{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.thirdBg-left{
+    width: 30%;
+    background-color: #8D8741;
+}
+
+.thirdBg-right{
+    width: 70%;
+    background-color: #2E1114;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.thirdBG-image{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    right: 0px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 3;
+}
+
+.bgLemon{
+    width: 80%;
+    height: 80%;
+    z-index: 3;
+}
+
+.bgLeaf{
+    transform: rotate(170deg);
+    position: relative;
+    top: 100px;
+    left: -40px;
+    height: 250px;
+    z-index: -1;
+}
+
+.thirdContent{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thirdContainer{
+    position: relative;
+    width: 55%;
+    height: 45%;
+    background-color: white;
+    display: flex;
+    z-index: 0;
+    right: 100px;
+}
+
+.thirdContent-ImageContainer{
+    position: absolute;
+    width: 30%;
+    position: relative;
+    z-index: 1 ;
+}
+
+.glass-img-1{
+    position: absolute;
+    height: 302px;
+    transform: rotate(-18deg);
+}
+.leaf-img-1{
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    transform: rotate(-120deg);
+    top: -67px;
+    left: -108px;
+}
+
+.lemon-img-1{
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 123px;
+    left: -79px;
+}
+.lemon-img-2{
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: -80px;
+    left: 74px;
+    z-index: 0;
+}
+
+.thirdContent-ContentContainer{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.thirdContent-head{
+    color: #FE043C;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.thirdContent-head ::before{
+    content: "";
+    background-color: #FE043C;
+    width: 70%;
+    margin: auto;
+    height: 5px;
+    position: absolute;
+    top: -10px;
+    left: 15%;
+}
+
+.thirdContent-inputs{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+}
+
+.formText{
+    height: fit-content;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.formText > input[type = text]{
+    background-color: white;
+    border: none;
+    width: 80%;
+    height: 50px;
+    padding-left: 50px;
+    box-shadow: 5px 10px 20px 5px #ffe6d1;
+}
+
+.formText > input[type = text]:is(:hover,:focus){
+    outline: none;
+}
+
+.formText > input[type = button]{
+    background-color: #FE043C;
+    position: absolute;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 40px;
+    right: 60px;
+    top:5px;
+    margin: auto 0px;
+}
+
+.formText > input[type = button]:is(:hover, :focus){
+    outline: none;
+}
+
+.formOptions{   
+    display: flex;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    color: #FE043C;
+}
+
+.formOptions > div{
+    display: flex;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.formOptions  input, select, option{
+    border: none;
+    outline: none;
+    color: gray;
+    margin-top: 5px;
+}
+
+.thirdContainer::after{
+    content: "";
+    border: 5px dotted white;
+    height: 200px;
+    width: 15px;
+    position: absolute;
+    right: -40px;
+}
+
+svg{
+    height: 100%;
+}
+.bgElem{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    z-index: 0;
+}
+.bgElem1{
+    top: 64px;
+    left: 146px;
+}
+.bgElem2{
+    top: 47px;
+    left: 1102px;
+}
+.bgElem3{
+    top: 610px;
+    left: 500px;
+}
+.bgElem4{
+    top: 500px;
+    left: 1200px;
+}
+.bgElem5{
+    top: 80px;
+    left: 1200px;
+}
+.bgElem4{
+    top: 500px;
+    left: 1200px;
 }

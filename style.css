@@ -1,8 +1,11 @@
+/* Defauls */
 :root {
     --primary-font: 'Poppins', sans-serif;
     --primary-color: #2E1114;
 }
-
+::selection{
+    background-color: #fffa988d;
+}
 @font-face {
     font-family: glitch;
     src: url(RubikGlitch-Regular.ttf);
@@ -62,6 +65,7 @@ nav {
     width: 100%;
     align-items: flex-end;
     position: relative;
+    z-index: 5;
 }
 
 .navHead {
@@ -95,6 +99,15 @@ nav {
     margin-right: 40px;
     font-size: 13px;
     letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.navLinks ul li>a{
+    transition: all 0.3s ease-in;
+}
+
+.navLinks ul li>a:is(:hover, :focus){
+    color: #FE043C;
 }
 
 .userIcon {
@@ -103,12 +116,16 @@ nav {
     display: flex;
     align-items: center;
     color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.userIcon:hover {
+    color: #FE043C;
 }
 
 .userIcon img {
     height: 50px;
-    position: absolute;
-    right: 50px;
     margin-right: 10px;
 }
 
@@ -137,6 +154,7 @@ nav {
 }
 
 .leftHero-content {
+    position: relative;
     margin-top: 50px;
 }
 
@@ -150,6 +168,12 @@ nav {
     text-shadow: 5px 6px 10px black;
     -webkit-text-stroke: 8px #FFFDD5;
     -moz-text-stroke: 8px #FFFDD5;
+    transition: all 0.5s ease-out;
+    position: relative;
+}
+
+.leftHero-content h1:hover {
+    text-shadow: 20px 10px 10px black;
 }
 
 .leftHero-content p {
@@ -160,6 +184,7 @@ nav {
     margin-left: 20px;
     -webkit-text-stroke: 2px white;
     -moz-text-stroke: 2px white;
+    position: relative;
 }
 
 .search {
@@ -199,36 +224,49 @@ input[type=text]:is(:hover, :focus) {
 }
 
 .burger {
-    height: 120%;
+    height: 118%;
     position: relative;
-    left: 50px;
+    left: 100px;
     z-index: 0;
+    opacity: 0;
 }
 
 .tomato {
     height: 200px;
     width: 200px;
     position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease-out;
 }
 
 #tomato1 {
-    top: 55px;
-    left: -95px;
-    transform: rotate(75deg);
+    top: 127px;
+    left: 87px;
+    z-index: -1;
 }
 
 #tomato2 {
     z-index: -1;
     top: 212px;
-    left: -44px;
-    transform: rotate(30deg);
+    left: 90px;
 }
 
 #tomato3 {
     z-index: -1;
-    top: 381px;
-    left: -92px;
-    transform: rotate(50deg);
+    left: 72px;
+    top: 317px;
+}
+
+#tomato1:hover{
+    transform: rotate(30deg) scale(1.3);
+}
+
+#tomato2:hover{
+    transform: rotate(30deg) scale(1.3);
+}
+
+#tomato3:hover{
+    transform: rotate(30deg) scale(1.3);
 }
 
 .mainBottom {
@@ -243,7 +281,6 @@ input[type=text]:is(:hover, :focus) {
 .location {
     display: flex;
     color: white;
-    background-color: aqua;
     height: fit-content;
     padding: 5px 20px;
     background: #8D8741;
@@ -253,10 +290,17 @@ input[type=text]:is(:hover, :focus) {
     border-radius: 0px 50px 50px 0px;
     position: relative;
     top: -30px;
+    left: -1000px;
+    cursor: pointer;
+}
+
+.location:hover i{
+    font-size: 25px;
 }
 
 .location>i {
     margin-right: 5px;
+    transition: all 0.5s;
 }
 
 .rightLeftIcons {
@@ -265,6 +309,10 @@ input[type=text]:is(:hover, :focus) {
     display: flex;
     justify-content: space-around;
     margin: auto 0px;
+    color: white;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    opacity: 0;
 }
 
 .rightLeftIcons>div {
@@ -276,6 +324,7 @@ input[type=text]:is(:hover, :focus) {
     justify-content: center;
     border-radius: 50%;
     position: relative;
+    transition: all 0.3s ease-in;
 }
 
 .rightLeftIcons>div>i {
@@ -283,7 +332,6 @@ input[type=text]:is(:hover, :focus) {
     top: 0px;
     font-size: 35px;
     font-weight: 100;
-    color: white;
 }
 
 .toLeft>i {
@@ -348,12 +396,10 @@ input[type=text]:is(:hover, :focus) {
 .secondContent {
     height: 100vh;
     width: 100vw;
-    /* background-color: aqua; */
     position: absolute;
     padding: 50px 100px;
     top: 0px;
     overflow: hidden;
-    /* opacity: 0.5; */
 }
 
 .secondTop {
@@ -374,7 +420,6 @@ input[type=text]:is(:hover, :focus) {
     padding: 0px 15px;
     font-weight: 800;
     position: relative;
-
 }
 
 .secondHead>h1 {
@@ -395,6 +440,7 @@ input[type=text]:is(:hover, :focus) {
     padding-right: 110px;
     color: white;
     font-size: 15px;
+    position: relative;
 }
 
 .secondCards {
@@ -981,6 +1027,7 @@ svg {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
 .lastContent-head {

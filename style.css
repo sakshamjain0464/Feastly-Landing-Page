@@ -3,9 +3,11 @@
     --primary-font: 'Poppins', sans-serif;
     --primary-color: #2E1114;
 }
-::selection{
+
+::selection {
     background-color: #fffa988d;
 }
+
 @font-face {
     font-family: glitch;
     src: url(RubikGlitch-Regular.ttf);
@@ -21,6 +23,8 @@
 
 body {
     overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -102,11 +106,12 @@ nav {
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
-.navLinks ul li>a{
+
+.navLinks ul li>a {
     transition: all 0.3s ease-in;
 }
 
-.navLinks ul li>a:is(:hover, :focus){
+.navLinks ul li>a:is(:hover, :focus) {
     color: #FE043C;
 }
 
@@ -257,15 +262,15 @@ input[type=text]:is(:hover, :focus) {
     top: 317px;
 }
 
-#tomato1:hover{
+#tomato1:hover {
     transform: rotate(30deg) scale(1.3);
 }
 
-#tomato2:hover{
+#tomato2:hover {
     transform: rotate(30deg) scale(1.3);
 }
 
-#tomato3:hover{
+#tomato3:hover {
     transform: rotate(30deg) scale(1.3);
 }
 
@@ -294,7 +299,7 @@ input[type=text]:is(:hover, :focus) {
     cursor: pointer;
 }
 
-.location:hover i{
+.location:hover i {
     font-size: 25px;
 }
 
@@ -305,14 +310,15 @@ input[type=text]:is(:hover, :focus) {
 
 .rightLeftIcons {
     height: fit-content;
+    position: relative;
     width: 180px;
     display: flex;
     justify-content: space-around;
-    margin: auto 0px;
+    margin: 20px 0px;
     color: white;
     transition: all 0.3s ease-in;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
 }
 
 .rightLeftIcons>div {
@@ -747,6 +753,7 @@ input[type=text]:is(:hover, :focus) {
     right: 60px;
     top: 5px;
     margin: auto 0px;
+    cursor: pointer;
 }
 
 .formText>input[type=button]:is(:hover, :focus) {
@@ -1082,6 +1089,7 @@ svg {
     right: 8px;
     background-color: #FE043C;
     color: white;
+    cursor: pointer;
 }
 
 .lastContent-mid>ul {
@@ -1122,12 +1130,14 @@ svg {
     height: 50px;
     width: 50px;
 }
+
 .last-bgElem2 {
     top: 550px;
     left: 161px;
     height: 50px;
     width: 50px;
 }
+
 .last-bgElem3 {
     top: 450px;
     left: 550px;
@@ -1176,7 +1186,7 @@ svg {
     height: 100px;
 }
 
-footer{
+footer {
     height: 50px;
     width: 100vw;
     display: flex;
@@ -1185,7 +1195,7 @@ footer{
     padding: 0px 20px;
 }
 
-.credits{
+.credits {
     color: white;
     font-size: 12px;
     display: flex;
@@ -1193,28 +1203,47 @@ footer{
     letter-spacing: 1.5px;
 }
 
-.credits a{
+.credits a {
     color: #FE043C;
     font-size: 13px;
     text-decoration: underline;
 }
 
-.icons{
+.icons {
     width: fit-content;
     display: flex;
     align-items: center;
     margin-right: 20px;
 }
-.icons > svg{
+
+.icons>svg {
     height: 20px;
     width: 20px;
     margin: 0px 10px;
     cursor: pointer;
 }
 
-.icons > p{
+.icons>p {
     font-size: 12px;
     color: white;
     letter-spacing: 1px;
     cursor: pointer;
+}
+
+/* Mouse Follower */
+.mouseFollower {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    top: 0px;
+    border-radius: 50%;
+    background-color: #FFFDD5;
+    z-index: 1;
+    mix-blend-mode: difference;
+    overflow: hidden;
+}
+
+.mouseFollower>img {
+    height: 100%;
+    width: 100%;
 }

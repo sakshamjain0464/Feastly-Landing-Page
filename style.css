@@ -754,10 +754,12 @@ input[type=text]:is(:hover, :focus) {
     top: 5px;
     margin: auto 0px;
     cursor: pointer;
+    transition: all .3s ease-in;
 }
 
-.formText>input[type=button]:is(:hover, :focus) {
+.formText>input[type=button]:active {
     outline: none;
+    background: #e10031;
 }
 
 .formOptions {
@@ -1092,6 +1094,10 @@ svg {
     cursor: pointer;
 }
 
+.lastContent-mid>.email-input>button:active{
+    background-color: #e10031;
+}
+
 .lastContent-mid>ul {
     list-style: none;
     display: flex;
@@ -1103,6 +1109,11 @@ svg {
 
 .lastContent-mid>ul>li {
     margin: 0px 10px;
+    cursor: pointer;
+}
+
+.lastContent-mid>ul>li:hover{
+    color: #FE043C;
 }
 
 .lastContent-right {
@@ -1237,6 +1248,7 @@ footer {
     width: 30px;
     top: 0px;
     border-radius: 50%;
+    opacity: 0;
     background-color: #FFFDD5;
     z-index: 1;
     mix-blend-mode: difference;

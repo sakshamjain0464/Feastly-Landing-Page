@@ -267,9 +267,11 @@ lastTl_BG.from(".last-bgElem", {
 
 // Mouse Follower
 let cursor = document.querySelector(".mouseFollower");
-
 document.addEventListener('mousemove', (e) => {
-    // console.log(e.target)
+    gsap.to('.mouseFollower', {
+        opacity: 1,
+        duration: 1.2
+    })
     if (e.target.className == 'mouseFollower') {
         gsap.to('.mouseFollower', {
             top: e.clientY,

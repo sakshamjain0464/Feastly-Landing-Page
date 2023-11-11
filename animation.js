@@ -237,15 +237,28 @@ let lastTl_BG = gsap.timeline({
     }
 })
 
-let lastTl_Content = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".last",
-        start: "top 80%",
-        end: "top 20%",
-        // markers : true,
-        scrub: 2
-    }
-})
+if (window.innerWidth <= 700) {
+    var lastTl_Content = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".last",
+            start: "top 80%",
+            end: "top 70%",
+            markers: true,
+            scrub: 2
+        }
+    })
+} else {
+    var lastTl_Content = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".last",
+            start: "top 80%",
+            end: "top 20%",
+            // markers : true,
+            scrub: 2
+        }
+    })
+}
+
 
 lastTl_Content.from(".lastContent-left > img", {
     opacity: 0,

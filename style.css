@@ -19,6 +19,7 @@
     box-sizing: border-box;
     font-family: var(--primary-font);
     z-index: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -72,6 +73,9 @@ nav {
     z-index: 5;
 }
 
+nav > .fa, .navLinks> .fa{
+    display: none;
+}
 .navHead {
     margin-right: 20px;
 }
@@ -308,6 +312,9 @@ input[type=text]:is(:hover, :focus) {
     transition: all 0.5s;
 }
 
+.scroll{
+    display: none;
+}
 .rightLeftIcons {
     height: fit-content;
     position: relative;

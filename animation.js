@@ -71,6 +71,13 @@ mainTl.to(".rightLeftIcons", {
     duration: 0.5,
 });
 
+mainTl.from(".scroll>i, .scroll>p", {
+    top: -10,
+    opacity: 0,
+    repeat: -1,
+    stagger: 0.9,
+    delay: 0.2
+})
 // Tomatos Hover effect
 let tomato = document.querySelectorAll(".tomato");
 tomato = Array.from(tomato);
@@ -241,8 +248,8 @@ if (window.innerWidth <= 700) {
     var lastTl_Content = gsap.timeline({
         scrollTrigger: {
             trigger: ".last",
-            start: "top 80%",
-            end: "top 70%",
+            start: "top 950%",
+            end: "top 90%",
             markers: true,
             scrub: 2
         }
@@ -338,3 +345,72 @@ document.addEventListener('mousemove', (e) => {
         });
     }
 })
+
+// Expanding Navbar
+
+function expandNav(){
+    let nav = document.querySelector(".navLinks");
+    if(nav.classList.contains('expand')){
+        gsap.to(".fa-location-arrow",{
+            top: 0,
+            left:0,
+            duration: 0.5,
+            ease:"powerIn.inOut"
+        });
+        gsap.to(".navLinks",{
+            left:-500,
+            duration: 1,
+            ease:"powerIn.in"
+        });
+        nav.classList.remove("expand");
+    }
+    else{
+        gsap.to(".fa-location-arrow",{
+            top: -500,
+            left:500,
+            duration: 1.5,
+            ease:"powerIn.inOut"
+        });
+        gsap.to(".navLinks",{
+            left:0,
+            duration: 1,
+            ease:"powerIn.in"
+        });
+        nav.classList.add('expand');
+    }
+}
+
+function expandSection(){
+    let section = document.querySelector(".fourthCards");
+    if(section.classList.contains('expand')){
+        gsap.to(".fourthCards",{
+            height: 0,
+            duration: 0.5,
+            ease:"powerIn.inOut"
+        });
+        gsap.to(".fourthCard",{
+            height: 0
+        });
+        gsap.to(".fourthContent>i",{
+            rotate: 0,
+            ease:"powerIn.in"
+        });
+        section.classList.remove("expand");
+    }
+    else{
+        gsap.to(".fourthCards",{
+            height: "fit-content",
+            duration: 0.5,
+            ease:"powerIn.inOut"
+        });
+        gsap.to(".fourthCard",{
+            height: "100%",
+            duration:0
+        });
+        gsap.to(".fourthContent>i",{
+            rotate: 180,
+            ease:"powerIn.in"
+        });
+        section.classList.add("expand");
+    }
+}

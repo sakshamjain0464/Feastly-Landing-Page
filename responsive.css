@@ -665,18 +665,22 @@
 
 /* Small Tablets */
 @media screen and (max-width : 500px) {
-    main{
+    main {
         height: 90vh;
         background: #2E1114;
     }
-    .bg{
+
+    .bg {
         display: none;
     }
-    .mainContent{
+
+    .mainContent {
         height: fit-content;
         position: relative;
     }
-    nav > .fa, .navLinks> .fa{
+
+    nav>.fa,
+    .navLinks>.fa {
         display: block;
         font-size: 30px;
         color: #FFFDD5;
@@ -684,13 +688,14 @@
         position: relative;
     }
 
-    .navLinks> .fa{
+    .navLinks>.fa {
         color: #2E1114;
         position: absolute;
         right: 20px;
         top: 20px;
     }
-    .navLinks{
+
+    .navLinks {
         position: absolute;
         top: -30px;
         height: 100vh;
@@ -699,7 +704,7 @@
         left: -500px;
     }
 
-    .navLinks > ul{
+    .navLinks>ul {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -709,21 +714,23 @@
         padding: 100px;
         backdrop-filter: blur(5px);
     }
-    .navLinks > ul > li{
+
+    .navLinks>ul>li {
         margin-bottom: 20px;
     }
-    .navLinks > ul > li > a{
+
+    .navLinks>ul>li>a {
         color: #ffffff;
     }
 
-    .hero{
+    .hero {
         height: 50vh;
         align-items: center;
         justify-content: center;
 
     }
 
-    .leftHero-content h1{
+    .leftHero-content h1 {
         font-size: 50px;
         line-height: 30px;
         margin-bottom: 20px;
@@ -733,31 +740,32 @@
         color: #FFFDD5;
     }
 
-    .leftHero-content p{
+    .leftHero-content p {
         font-size: 20px;
     }
 
-    .search{
+    .search {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    input[itemprop=search]{
+
+    input[itemprop=search] {
         margin: auto;
         height: 40px;
         width: 90%;
         margin-bottom: 10px;
     }
 
-    .search>button{
+    .search>button {
         width: 70px;
         border-radius: 50px;
         position: relative;
     }
 
-    .mainBottom{
+    .mainBottom {
         display: flex;
         margin-top: 20px;
         align-items: center;
@@ -765,14 +773,14 @@
         flex-direction: column;
     }
 
-    .location{
+    .location {
         border-radius: 50px;
         position: relative;
         top: 0px;
         margin-bottom: 30px;
     }
 
-    .scroll{
+    .scroll {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -782,97 +790,109 @@
         top: 0px;
     }
 
-    .scroll>i{
+    .scroll>i {
         position: relative;
         height: 15px;
     }
-    
-    .secondTop{
+
+    .secondTop {
         display: flex;
         flex-direction: column;
     }
-    .secondHead{
+
+    .secondHead {
         display: block;
         margin-bottom: 20px;
     }
 
-    .secondHead>h1{
+    .secondHead>h1 {
         color: #FE043C;
         -webkit-text-stroke: 0.00px white;
         -moz-text-stroke: 0.00px white;
     }
 
-    .secondHead>h1::before{
+    .secondHead>h1::before {
         height: 100%;
     }
-    .secondCards{
+
+    .secondCards {
         height: fit-content;
         flex-direction: column;
     }
 
-    .card{
+    .card {
         margin-top: 20px;
         width: 90%;
         height: 300px;
     }
-    .thirdContainer{
+
+    .thirdContainer {
         width: 0vw;
         position: relative;
     }
-    .thirdContent{
+
+    .thirdContent {
         position: relative;
     }
-    .thirdContent-ContentContainer{
+
+    .thirdContent-ContentContainer {
         width: 95vw;
         display: flex;
     }
-    .formText{
+
+    .formText {
         width: 100%;
     }
 
-    .formText>input[type=text]{
+    .formText>input[type=text] {
         width: 100%;
     }
 
-    .formText>input[type=button]{
+    .formText>input[type=button] {
         right: 10px;
         width: 40px;
         border-radius: 50%;
     }
 
-    .formOptions{
+    .formOptions {
         width: 90%;
         flex-wrap: wrap;
         align-items: stretch;
         justify-content: space-around;
     }
 
-    .formOptions>div{
+    .formOptions>div {
         width: initial;
         align-items: center;
         flex-wrap: wrap;
     }
 
-    .fourthCards{
+    .fourthCards {
         grid-template-rows: repeat(6, 250px);
         grid-template-columns: repeat(1, 1fr);
         row-gap: 30px;
     }
-    .fourthCards, .fourthCard{
+
+    .fourthCards,
+    .fourthCard {
         margin-bottom: 0px;
         height: 0px;
     }
-    .fourthContent>i{
+
+    .fourthContent>i {
         font-size: 30px;
         color: white;
         margin-top: 10px;
     }
+
     .fourthCard>div>.cardSec1 {
         width: 60%;
     }
+
     .fourthCard>div>.cardSec1>p {
         padding-left: 30px;
     }
+
     .fourthCard>div>.cardSec2 {
         width: 40%;
         display: flex;
@@ -881,39 +901,47 @@
         color: #FE043C;
         font-weight: 900;
     }
-    .last{
+
+    .last {
         width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .lastContent{
+
+    .lastContent {
         min-width: 20px;
         width: 95%;
     }
-    .lastContent-mid>.email-input{
+
+    .lastContent-mid>.email-input {
         width: 90%;
     }
-    .lastContent-mid>ul{
+
+    .lastContent-mid>ul {
         display: none;
     }
-    footer{
+
+    footer {
         height: fit-content;
         flex-direction: column;
         text-align: center;
         align-items: center;
     }
-    .credits{
+
+    .credits {
         width: 100%;
         margin-bottom: 10px;
     }
-    .icons>svg{
+
+    .icons>svg {
         text-align: center;
         display: inline;
         font-size: 20px;
         margin-bottom: 30px;
     }
-    .icons>p{
+
+    .icons>p {
         display: none;
     }
 }

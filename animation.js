@@ -250,7 +250,7 @@ if (window.innerWidth <= 700) {
             trigger: ".last",
             start: "top 950%",
             end: "top 90%",
-            markers: true,
+            // markers: true,
             scrub: 2
         }
     })
@@ -348,68 +348,68 @@ document.addEventListener('mousemove', (e) => {
 
 // Expanding Navbar
 
-function expandNav(){
+function expandNav() {
     let nav = document.querySelector(".navLinks");
-    if(nav.classList.contains('expand')){
-        gsap.to(".fa-location-arrow",{
+    if (nav.classList.contains('expand')) {
+        gsap.to(".fa-location-arrow", {
             top: 0,
-            left:0,
+            left: 0,
             duration: 0.5,
-            ease:"powerIn.inOut"
+            ease: "powerIn.inOut"
         });
-        gsap.to(".navLinks",{
-            left:-500,
+        gsap.to(".navLinks", {
+            left: -500,
             duration: 1,
-            ease:"powerIn.in"
+            ease: "powerIn.in"
         });
         nav.classList.remove("expand");
     }
-    else{
-        gsap.to(".fa-location-arrow",{
+    else {
+        gsap.to(".fa-location-arrow", {
             top: -500,
-            left:500,
+            left: 500,
             duration: 1.5,
-            ease:"powerIn.inOut"
+            ease: "powerIn.inOut"
         });
-        gsap.to(".navLinks",{
-            left:0,
+        gsap.to(".navLinks", {
+            left: 0,
             duration: 1,
-            ease:"powerIn.in"
+            ease: "powerIn.in"
         });
         nav.classList.add('expand');
     }
 }
 
-function expandSection(){
+function expandSection() {
     let section = document.querySelector(".fourthCards");
-    if(section.classList.contains('expand')){
-        gsap.to(".fourthCards",{
+    if (section.classList.contains('expand')) {
+        gsap.to(".fourthCards", {
             height: 0,
             duration: 0.5,
-            ease:"powerIn.inOut"
+            ease: "powerIn.inOut"
         });
-        gsap.to(".fourthCard",{
+        gsap.to(".fourthCard", {
             height: 0
         });
-        gsap.to(".fourthContent>i",{
+        gsap.to(".fourthContent>i", {
             rotate: 0,
-            ease:"powerIn.in"
+            ease: "powerIn.in"
         });
         section.classList.remove("expand");
     }
-    else{
-        gsap.to(".fourthCards",{
+    else {
+        gsap.to(".fourthCards", {
             height: "fit-content",
             duration: 0.5,
-            ease:"powerIn.inOut"
+            ease: "powerIn.inOut"
         });
-        gsap.to(".fourthCard",{
+        gsap.to(".fourthCard", {
             height: "100%",
-            duration:0
+            duration: 0
         });
-        gsap.to(".fourthContent>i",{
+        gsap.to(".fourthContent>i", {
             rotate: 180,
-            ease:"powerIn.in"
+            ease: "powerIn.in"
         });
         section.classList.add("expand");
     }

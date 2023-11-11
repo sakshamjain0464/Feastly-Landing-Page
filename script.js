@@ -6,32 +6,32 @@ const guestNo = document.querySelector("#guestInput");
 const submit = document.querySelector("#goBtn");
 let dateObj = new Date();
 
-function createDate(){
+function createDate() {
     let date = dateObj.getDate();
     let month = dateObj.getMonth() + 1;
     let year = dateObj.getFullYear();
-    if(date<10){
+    if (date < 10) {
         date = '0' + date;
     }
-    if(month<10){
+    if (month < 10) {
         month = '0' + month;
     }
     return `${year}-${month}-${date}`;
 }
 
-function createTime(){
+function createTime() {
     let hours = dateObj.getHours();
     let minutes = dateObj.getMinutes();
-    if(hours<10){
+    if (hours < 10) {
         hours = '0' + hours;
     }
-    if(minutes<10){
+    if (minutes < 10) {
         minutes = '0' + minutes;
     }
     return `${hours}:${minutes}`;
 }
 
-async function sendData(data){
+async function sendData(data) {
     const api = "https://sheetdb.io/api/v1/zllh1ai30cutn?sheet=Booking";
     await fetch(api, {
         method: 'POST',
@@ -43,51 +43,51 @@ async function sendData(data){
             data: [data]
         })
     })
-  .then((response) => response.json())
-  .then((data) => alert(`Booking Successful for ${custName.value}`))
-  .catch((error) => alert("An Error Occurred, Kindly Try after some time"));
-  setDefault();
+        .then((response) => response.json())
+        .then((data) => alert(`Booking Successful for ${custName.value}`))
+        .catch((error) => alert("An Error Occurred, Kindly Try after some time"));
+    setDefault();
 }
 
-function setDefault(){
+function setDefault() {
     custName.value = '';
     bookDate.value = createDate();
     bookTime.value = createTime();
 }
 
-setDefault()
+setDefault();
 
 let timeChange = setInterval(() => {
     bookDate.value = createDate();
     bookTime.value = createTime();
 }, 360000);
 
-submit.addEventListener('click', ()=>{
+submit.addEventListener('click', () => {
     let bookingDateObj = new Date(bookDate.value);
     let bookingTimeObj = moment(bookTime.value, "hh:mm");
-    if(custName.value == ''){
+    if (custName.value == '') {
         alert("Kindly Enter Booking Name");
     }
-    else if(bookingDateObj.getFullYear() < dateObj.getFullYear()){
+    else if (bookingDateObj.getFullYear() < dateObj.getFullYear()) {
         alert("Year cannot be less than current year");
     }
-    else if(bookingDateObj.getFullYear() == dateObj.getFullYear() && bookingDateObj.getMonth() < dateObj.getMonth()){
+    else if (bookingDateObj.getFullYear() == dateObj.getFullYear() && bookingDateObj.getMonth() < dateObj.getMonth()) {
         alert("Month cannot be less than current Month");
     }
-    else if(bookingDateObj.getFullYear() == dateObj.getFullYear() && bookingDateObj.getMonth() == dateObj.getMonth() && bookingDateObj.getDate() < dateObj.getDate()){
+    else if (bookingDateObj.getFullYear() == dateObj.getFullYear() && bookingDateObj.getMonth() == dateObj.getMonth() && bookingDateObj.getDate() < dateObj.getDate()) {
         alert("Previous date entered");
     }
-    else if(bookingDateObj.getFullYear() == dateObj.getFullYear() && bookingDateObj.getMonth() == dateObj.getMonth() && bookingDateObj.getDate() == dateObj.getDate() && bookingTimeObj.hour() < dateObj.getHours()+3){
+    else if (bookingDateObj.getFullYear() == dateObj.getFullYear() && bookingDateObj.getMonth() == dateObj.getMonth() && bookingDateObj.getDate() == dateObj.getDate() && bookingTimeObj.hour() < dateObj.getHours() + 3) {
         alert("Slot not available");
     }
-    else{
+    else {
         let data = {
             'B_ID': "INCREMENT",
             'Customer_Name': `${custName.value}`,
-            'Booking_Date': `${bookingDateObj.getDate()}/${bookingDateObj.getMonth()+1}/${bookingDateObj.getFullYear()}`,
+            'Booking_Date': `${bookingDateObj.getDate()}/${bookingDateObj.getMonth() + 1}/${bookingDateObj.getFullYear()}`,
             'Booking_Time': `${bookingTimeObj.hour()}:${bookingTimeObj.minute()}`,
             'People': `${guestNo.value}`
-        }
+        };
         sendData(data);
     }
 });
@@ -95,9 +95,9 @@ submit.addEventListener('click', ()=>{
 // Submitting Emails
 const submitEmail = document.querySelector(".email-input > button");
 const emailInput = document.querySelector(".email-input > input");
-console.log(submitEmail)
+console.log(submitEmail);
 
-async function sendEmail(data){
+async function sendEmail(data) {
     const api = "https://sheetdb.io/api/v1/zllh1ai30cutn?sheet=e-mail";
     await fetch(api, {
         method: "POST",
@@ -109,17 +109,17 @@ async function sendEmail(data){
             data: [data]
         })
     })
-    .then((response) => response.json())
-    .then((data) => alert("Email Submitted!"))
-    .catch((error) => alert("An Error Occurred, Kindly Try after some time"));
+        .then((response) => response.json())
+        .then((data) => alert("Email Submitted!"))
+        .catch((error) => alert("An Error Occurred, Kindly Try after some time"));
     emailInput.value = "";
 }
 
 submitEmail.addEventListener('click', () => {
-    if(emailInput.value == ''){
+    if (emailInput.value == '') {
         alert("Enter your E-mail First");
     }
-    else{
+    else {
         let data = {
             'SNO': "INCREMENT",
             'Email': `${emailInput.value}`,

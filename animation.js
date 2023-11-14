@@ -248,9 +248,9 @@ if (window.innerWidth <= 700) {
     var lastTl_Content = gsap.timeline({
         scrollTrigger: {
             trigger: ".last",
-            start: "top 950%",
-            end: "top 90%",
-            // markers: true,
+            start: "top 110%",
+            end: "top 120%",
+            markers: true,
             scrub: 2
         }
     })
